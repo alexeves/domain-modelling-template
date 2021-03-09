@@ -4,8 +4,7 @@ default:
       paths:
         - "%paths.base%/tests/acceptance/DemoDomain"
       contexts:
-        - Tests\Acceptance\DemoDomain\features\bootstrap\FeatureContext:
-          - '@PlannerService'
+        - Tests\Acceptance\DemoDomain\features\bootstrap\FeatureContext
 
   extensions:
     Zalas\Behat\NoExtension:

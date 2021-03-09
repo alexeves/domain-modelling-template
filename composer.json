@@ -23,5 +23,10 @@
             "Tests\\Unit\\": "tests/unit",
             "Tests\\Acceptance\\": "tests/acceptance"
         }
+    },
+    "config": {
+        "platform": {
+          "php": "7.4"
+        }
     }
 }
