@@ -1,12 +1,12 @@
 services:
 
   App\:
-    resource: '../../../../../src'
+    resource: '../../../src'
     public: true
     autowire: true
 
   Tests\Acceptance\:
-    resource: '../../../'
+    resource: '../'
     public: true
     autowire: true
 

@@ -1,6 +1,6 @@
 default:
   suites:
-    planner:
+    demo_domain:
       paths:
         - "%paths.base%/tests/acceptance/DemoDomain"
       contexts:
@@ -10,4 +10,4 @@ default:
     Zalas\Behat\NoExtension:
       argument_resolver: true
       imports:
-        - "%paths.base%/tests/acceptance/DemoDomain/features/bootstrap/services.yml"
+        - "%paths.base%/tests/acceptance/config/services.yml"
