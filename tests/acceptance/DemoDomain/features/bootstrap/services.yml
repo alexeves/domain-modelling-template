@@ -10,7 +10,7 @@ services:
     public: true
     autowire: true
 
-  Tests\Acceptance\DemoDomain\Infrastructure\InMemoryPlannerRepository:
-    class: Tests\Acceptance\DemoDomain\Infrastructure\InMemoryPlannerRepository
+  Tests\Acceptance\DemoDomain\Infrastructure\InMemoryDemoDomainRepository:
+    class: Tests\Acceptance\DemoDomain\Infrastructure\InMemoryDemoDomainRepository
 
-  App\DemoDomain\Repository\PlannerRepositoryInterface: '@Tests\Acceptance\DemoDomain\Infrastructure\InMemoryPlannerRepository'
+  App\DemoDomain\Repository\DemoDomainRepositoryInterface: '@Tests\Acceptance\DemoDomain\Infrastructure\InMemoryDemoDomainRepository'

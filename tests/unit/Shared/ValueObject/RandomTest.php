@@ -10,7 +10,7 @@ class RandomTest extends TestCase
     public function testInvalidEmail(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionMessage('Too young to play!');
+        $this->expectExceptionMessage('Participants must be 16 or over');
         Random::fromAge(1);
     }
 }

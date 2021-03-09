@@ -9,7 +9,7 @@ class Random
     private function __construct(int $age)
     {
         if ($age < 16) {
-            throw new \InvalidArgumentException('Too young to play!');
+            throw new \InvalidArgumentException('Participants must be 16 or over');
         }
 
         $this->age = $age;
