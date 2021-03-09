@@ -1,0 +1,8 @@
+default:
+  suites:
+    planner:
+      paths:
+        - "%paths.base%/tests/acceptance/Planner"
+      contexts:
+        - Tests\Acceptance\Planner\features\bootstrap\FeatureContext:
+          - App\Planner\Service\PlannerService
