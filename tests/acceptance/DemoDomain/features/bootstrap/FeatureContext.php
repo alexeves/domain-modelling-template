@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Acceptance\Planner\features\bootstrap;
+namespace Tests\Acceptance\DemoDomain\features\bootstrap;
 
-use App\Planner\Service\PlannerService;
+use App\DemoDomain\Service\DemoDomainService;
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
@@ -13,7 +13,7 @@ use Behat\Gherkin\Node\TableNode;
  */
 class FeatureContext implements Context
 {
-    private PlannerService $plannerService;
+    private DemoDomainService $demoService;
 
     /**
      * Initializes context.
@@ -22,9 +22,9 @@ class FeatureContext implements Context
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
      */
-    public function __construct(PlannerService $plannerService)
+    public function __construct(DemoDomainService $demoService)
     {
-        $this->plannerService = $plannerService;
+        $this->demoService = $demoService;
     }
 
     /**
@@ -32,6 +32,6 @@ class FeatureContext implements Context
      */
     public function thereIsAServiceWithADependency()
     {
-
+        print_r($this->demoService);
     }
 }

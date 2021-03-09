@@ -2,7 +2,13 @@ default:
   suites:
     planner:
       paths:
-        - "%paths.base%/tests/acceptance/Planner"
+        - "%paths.base%/tests/acceptance/DemoDomain"
       contexts:
-        - Tests\Acceptance\Planner\features\bootstrap\FeatureContext:
-          - App\Planner\Service\PlannerService
+        - Tests\Acceptance\DemoDomain\features\bootstrap\FeatureContext:
+          - '@PlannerService'
+
+  extensions:
+    Zalas\Behat\NoExtension:
+      argument_resolver: true
+      imports:
+        - "%paths.base%/tests/acceptance/DemoDomain/features/bootstrap/services.yml"
